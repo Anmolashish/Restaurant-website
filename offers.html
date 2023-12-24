@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get in Touch</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" type="text/css" href="bootstrap.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+    // Function to show the login modal and hide the signup modal
+    function showLoginModal() {
+      $('#signupModal').modal('hide');
+      $('#loginModal').modal('show');
+    }
+
+    // Function to show the signup modal and hide the login modal
+    function showSignupModal() {
+      $('#loginModal').modal('hide');
+      $('#signupModal').modal('show');
+    }
+
+    $(document).ready(function() {
+      // Call showLoginModal function when the "Login" link in the signup modal is clicked
+      $('#signupModal').on('click', '#loginLink', function() {
+        showLoginModal();
+      });
+
+      // Call showSignupModal function when the "Signup" link in the login modal is clicked
+      $('#loginModal').on('click', '#signupLink', function() {
+        showSignupModal();
+      });
+    });
+
+    // Remove modal backdrop when modal is closed
+    $(document).on('hidden.bs.modal', '.modal', function () {
+      $('.modal-backdrop').remove();
+    });
+  </script>
+  
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne&family=Handlee&family=Allura&family=Great+Vibes&family=Pacifico&family=Homemade+Apple&family=Sacramento&display=swap');
+
+.fraktur {
+  font-family: 'Allura';
+  color: #ff971c;
+}
+
+
+
+#lk
+{
+	font-family: sans-serif;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+#lk .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="username"],
+.form-group input[type="password"],
+.form-group input[type="confirm_password"],
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 100%;
+}
+
+
+    /* Additional styles to make the login modal appear above the signup modal */
+    #loginModal {
+      z-index: 1200;
+    }
+
+
+#l
+{
+	font-family: sans-serif;
+	margin: 100px auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+#n .form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+#l .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="no"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #ccc;
+  width: 100%;
+}
+
+.nav-links li a {
+  color:#672F02;
+  text-decoration: none;
+}
+
+/* Style for the active link */
+.nav-links li a.active {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* Hover effect for links */
+.nav-links li a:hover {
+  color: #ff4500;
+}
+
+
+#a{
+	padding:10px;
+}
+#b{
+	margin-top:-50px;
+}
+
+.footer {
+      background-color: #FDF4ED;
+      color: black;
+      padding: 30px 0 0 0;
+    }
+
+.footer p {
+      margin-bottom: 0;
+    }
+
+
+ul.foot
+{
+	 list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.btn-rounded {
+	  margin:10px;
+      border-radius: 25px;
+    }
+a.foot:link {
+  color:black;
+  text-decoration: none;
+}
+a.foot:visited 
+{
+color: black;
+ text-decoration: none;
+ }
+a.foot:hover 
+ {
+ color: #676868;
+ text-decoration: underline;
+ }
+ 
+ a.m
+ {
+	text-decoration: none;
+ }
+ 
+ 
+  #my.jumbotron {
+      position: relative;
+      background-image: url('images/jumbo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    #my.jumbotron::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #my .content {
+      position: relative;
+      z-index: 1;
+    }
+	
+	
+	body {
+	  background-color:rgba(233, 125, 34, 0.6);
+    }
+
+    .scroll-box {
+	  margin: 50px;
+      height:90vh;
+      overflow-y: scroll;
+      position: relative;
+	  background-color:white;
+	  border-radius:20px;
+	  box-shadow: 0px 3px 8px rgba(233, 125, 34, 1);
+    }
+
+    .content {
+	  margin:20px;
+      animation: scrollText 20s linear infinite;
+    }
+
+    .content p {
+      margin: 0;
+      padding: 10px;
+    }
+
+  
+section
+{
+width:100%;
+display:flex;
+}
+.first
+{
+flex:3;
+}
+.second
+{
+flex:5;
+}
+
+#bo{
+	border-radius: 20px 0px 0px 20px;
+	margin-left: 10px; 
+	object-fit:cover;
+}
+
+ul
+{
+	margin-left:0px;
+}
+
+
+
+@media (max-width: 1477px) {
+
+	#bo{
+		border-radius: 20px;
+		margin-left: -10px; 
+		object-fit:cover;
+	}
+     
+	ul
+	{
+		margin-left: 10px;
+	}
+	.row
+	{
+		text-align:center;
+	}
+    }
+</style>
+<body>
+    <div id="section1">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:rgba(233, 125, 34, 0.9);">
+            <div class="container">
+              <a href="#" class="navbar-brand"><h2 style="color:#672F02"> YUM!</h2></a>
+              <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarid">
+                <ul class="navbar-nav text-center ml-auto">
+                  <li class="nav-items">
+                    <a href="index.html" class="nav-link ">Home</a>
+                  </li>
+                  <li class="nav-items">
+                    <a href="about_us.html" class="nav-link ">About Us</a>
+                  </li>
+                  
+                  <li class="nav-items">
+                    <a href="menu.html" class="nav-link">Menu</a>
+                  </li>
+                   <li class="nav-items">
+                    <a href="offers.html" class="nav-link active">Our Special Offers</a>
+                  </li>
+                  <li class="nav-items">
+                    <a href="contact_us.html" class="nav-link">Contact</a>
+                  </li>
+                  
+                  <li class="nav-items">
+                    <a href="signup.php" class="nav-link" >Signup</a>
+                  </li>
+                  <li class="nav-items">
+                    <a href="login.php" class="nav-link" >Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+<div class="jumbotron " id="my">
+<div class="container" >
+<br><br>
+<center>
+ <div class="row" style="margin:50px; padding:30px;"> 
+  <div class="col-12"> 
+	<h1 class="card-text text-center" style="color:white;"> Offers & Combos
+	</h1>
+</div> 
+
+
+</div>
+
+</center>
+</div>
+</div>
+
+
+<br>
+	<h3 class="card-text text-center " style="color:white;"> Unbeatable Offers and Irresistible Combos Await You!
+	</h3><hr>
+
+
+
+
+  <div class="scroll-box" onmouseenter="stopScroll()" onmouseleave="resumeScroll()">
+    <div class="content" id="scrollContent">
+      
+<div class="container" >
+ <!-- Fusion Combo -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/11.jpg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Fusion Combo - Price: ₹899</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: FUSION10 (Get 10% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <ul >
+                <li>Choice of fusion-style pizza (e.g., Butter Chicken Pizza or Tandoori Paneer Pizza)</li>
+                <li>A side of spiced burger (e.g., Masala Veggie Burger)</li>
+                <li>A refreshing drink (e.g., Mango Lassi or Masala Lemonade)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Indo-Chinese Feast -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/123.jpg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Indo-Chinese Feast - Price: ₹1,199</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: CHINESEFEAST15 (Get 15% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <ul >
+                <li>Delicious Chinese entrees (e.g., Manchurian, Hakka Noodles, or Szechuan Tofu)</li>
+                <li>A combo with soup (e.g., Hot and Sour Soup) and salad (e.g., Cucumber and Tomato Kachumber)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Dessert Delight -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/13.jpg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Dessert Delight - Price: ₹549</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: SWEETDESSERT20 (Get 20% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <ul >
+                <li>Assorted cookies and chocolates for a sweet treat</li>
+                <li>Choice of desserts (e.g., Gulab Jamun or Rasgulla)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Pasta and Pizza Combo -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/14.jpg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Pasta and Pizza Combo - Price: ₹849</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: PIZZAPASTA10 (Get 10% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <ul >
+                <li>Pasta with fusion flavors (e.g., Desi Masala Pasta or Paneer Tikka Pasta)</li>
+                <li>Thin crust pizza of your choice (e.g., Margherita or Veggie Supreme)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Sizzlers Special -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/15.jpg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Sizzlers Special - Price: ₹1,399</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: SIZZLERS25 (Get 25% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <ul >
+                <li>Sizzling platter with a choice of proteins (e.g., Veg Sizzler, Chicken Sizzler, or Paneer Sizzler)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Sandwich and Soup Lunch -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/16.jpg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Sandwich and Soup Lunch - Price: ₹799</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: LUNCHCOMBO5 (Get 5% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+           <ul >
+                <li>Fusion-style sandwiches (e.g., Aloo Tikki Sandwich or Spicy Chutney Veggie Sandwich)</li>
+                <li>A comforting soup (e.g., Lentil Soup or Tomato and Coriander Soup)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Marine Feast -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/17.jpg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Marine Feast - Price: ₹1,499</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: MARINEFEAST20 (Get 20% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <ul >
+                <li>Seafood platter with a variety of options (e.g., Fish Curry, Prawn Masala, or Garlic Butter Shrimp)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Lasagne Bonanza -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/18.jpg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Lasagne Bonanza - Price: ₹1,099</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: LASAGNE15 (Get 15% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <ul >
+                <li>Classic Veggie Lasagne or Chicken Lasagne with a side salad</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Refreshing Salad Bowl -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/19.jpeg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Refreshing Salad Bowl - Price: ₹499</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: HEALTHYSALAD10 (Get 10% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <ul >
+                <li>Fresh salad with a choice of dressings and toppings</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Cake and Coffee Treat -->
+<div class="row" style="margin-top: 50px; background-color: rgba(233, 125, 34, 0.3); border-radius: 20px;">
+    <div class="col-xl-4" style="margin: 17px 0px;">
+        <section>
+            <div class="first">
+                <p class="card-text">
+                    <img width="300px" height="150px" src="images/20.jpg" id="bo">
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-xl-8" style="margin: 17px 0px;">
+        <div class="second">
+            <h5 class="text-danger" style="margin-bottom: 10px;">Cake and Coffee Treat - Price: ₹549</h5>
+            <p style="font-size: 13px;">REFERRAL CODE: CAKECOFFEE5 (Get 5% off for every referral)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <ul >
+                <li>A slice of delicious cake (e.g., Black Forest or Chocolate Truffle)</li>
+                <li>A cup of coffee (e.g., Filter Coffee)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+ 
+</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer ">
+ <div class="container-fluid" style="margin-top:10px">
+	<div class="row" id="a"> 
+		<div class="col-xl-3" id="b">  
+			<div style="width:250px height:350px">
+				<p class="text-center">
+					<img width="200" height="200" src="logo.jpeg" alt="pizza-five-eighths"/>
+					<br>
+				</p>
+			</div> 
+		</div>
+<div class="col-xl-2" >  
+	<div style="width:250px height:350px">
+		<h3 class="font-weight-bold text-warning">Get started</h3>
+			<ul class="list-group list-group-horizontal foot">
+				<li><a href="home.html#section1" class="foot">Home</a></li>
+				<li><a href="#section1" class="foot">Signup</a></li>
+				<li><a href="menu.html" class="foot">Menu</a></li>
+			</ul>
+	</div> 
+	</div>
+
+
+<div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">About Us</h3>
+	<ul class="list-group list-group-horizontal foot">
+		<li><a href="about_us.html" class="foot">Company information</a></li>
+		<li><a href="contact_us.html" class="foot">Contact us</a></li>
+		<li><a href="home.html#reviews_section" class="foot">Reviews</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">Others</h3>
+	<ul class="list-group list-group-horizontal foot">
+		<li><a href="reservation.html" class="foot">Reservation</a></li>
+		<li><a href="home.html#combo" class="foot">Combos</a></li>
+		<li><a href="contact_us.html" class="foot">Address</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-3" id="a">  
+    <p class="card-text text-justify">
+	&nbsp&nbsp&nbsp
+	<a href="#" class="m"><img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/twitter--v1.png" alt="twitter--v1"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="20" height="20" src="https://img.icons8.com/ios-filled/30/facebook-f.png" alt="facebook-f"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="30" height="30" src="https://img.icons8.com/windows/30/google-plus.png" alt="google-plus"/>&nbsp&nbsp</a>
+	<br>
+	</p>
+	<a href="#"><button class="btn btn-danger  btn-rounded btn-lg">Contact us</button></a>
+	
+</div>
+	
+</div> 
+</div>
+
+ 
+</div>
+
+<div class="c-flex " style="background-color:rgba(0, 0, 0, 0.3)">
+  <p class="card-text text-center">&copy; 2023 My Website. Anmol Ashish.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>

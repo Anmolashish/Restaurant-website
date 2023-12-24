@@ -1,0 +1,1373 @@
+<html>
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" type="text/css" href="bootstrap.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+    // Function to show the login modal and hide the signup modal
+    function showLoginModal() {
+      $('#signupModal').modal('hide');
+      $('#loginModal').modal('show');
+    }
+
+    // Function to show the signup modal and hide the login modal
+    function showSignupModal() {
+      $('#loginModal').modal('hide');
+      $('#signupModal').modal('show');
+    }
+
+    $(document).ready(function() {
+      // Call showLoginModal function when the "Login" link in the signup modal is clicked
+      $('#signupModal').on('click', '#loginLink', function() {
+        showLoginModal();
+      });
+
+      // Call showSignupModal function when the "Signup" link in the login modal is clicked
+      $('#loginModal').on('click', '#signupLink', function() {
+        showSignupModal();
+      });
+    });
+
+    // Remove modal backdrop when modal is closed
+    $(document).on('hidden.bs.modal', '.modal', function () {
+      $('.modal-backdrop').remove();
+    });
+  </script>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne&family=Handlee&family=Allura&family=Great+Vibes&family=Pacifico&family=Homemade+Apple&family=Sacramento&display=swap');
+
+
+.fraktur {
+  font-family: 'Allura';
+  color: #ff971c;
+}
+
+
+
+#lk
+{
+	font-family: sans-serif;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+#lk .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="username"],
+.form-group input[type="password"],
+.form-group input[type="confirm_password"],
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 100%;
+}
+
+    /* Additional styles to make the login modal appear above the signup modal */
+    #loginModal {
+      z-index: 1200;
+    }
+
+
+ #my.jumbotron {
+      position: relative;
+      background-image: url('images/jumbo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    #my.jumbotron::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #my .content {
+      position: relative;
+      z-index: 1;
+    }
+	
+	#a{
+	padding:10px;
+}
+#b{
+	margin-top:-50px;
+}
+
+.footer {
+      background-color: #FDF4ED;
+      color: black;
+      padding: 30px 0 0 0;
+    }
+
+.footer p {
+      margin-bottom: 0;
+    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.btn-rounded {
+	  margin:10px;
+      border-radius: 25px;
+    }
+a.foot:link {
+  color:black;
+  text-decoration: none;
+}
+a.foot:visited 
+{
+color: black;
+ text-decoration: none;
+ }
+a.foot:hover 
+ {
+ color: #676868;
+ text-decoration: underline;
+ }
+ 
+ 
+ #custom-cards .card {
+    border-radius: 10px;
+    border: none;
+    max-width: 250px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+
+  #custom-cards .card-img-top {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100px;
+  }
+
+  #custom-cards .card-body {
+    padding: 15px;
+  }
+
+  #custom-cards .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .anm{
+		transition: transform 0.5s;
+	}
+	
+	img.anm
+	{
+		transition: transform 0.5s;
+	}
+	
+	.anm:Hover{
+	 transform: scale(1.1); 
+	 }
+	 
+	 
+	 table {
+      width: 100%;
+      margin: 30px auto;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 0spx solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-size: 18px;
+    }
+
+    td {
+      font-size: 16px;
+    }
+
+   
+
+    tr:hover {
+      background-color:rgba(233, 125, 34, 0.2);;
+      cursor: pointer;
+    }
+	
+	h5{
+		margin-top:20px;
+	}
+</style>
+
+<body>
+
+
+<div id="section1">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:rgba(233, 125, 34, 0.9);">
+    <div class="container">
+      <a href="#" class="navbar-brand"><h2 style="color:#672F02"> YUM!</h2></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarid">
+        <ul class="navbar-nav text-center ml-auto">
+          <li class="nav-items">
+            <a href="index.html" class="nav-link ">Home</a>
+          </li>
+          <li class="nav-items">
+            <a href="about_us.html" class="nav-link">About Us</a>
+          </li>
+          
+          <li class="nav-items">
+            <a href="menu.html" class="nav-link active">Menu</a>
+          </li>
+		   <li class="nav-items">
+            <a href="offers.html" class="nav-link">Our Special Offers</a>
+          </li>
+          <li class="nav-items">
+            <a href="contact_us.html" class="nav-link">Contact</a>
+          </li>
+          
+          <li class="nav-items">
+            <a href="signup.php" class="nav-link" >Signup</a>
+          </li>
+		  <li class="nav-items">
+            <a href="login.php" class="nav-link" >Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="jumbotron " id="my">
+<div class="container" >
+<br><br>
+<center>
+ <div class="row" style="margin:50px; padding:30px;"> 
+  <div class="col-12"> 
+	<h1 class="card-text text-center" style="color:white;"> Menu
+	</h1>
+</div> 
+
+
+</div>
+
+</center>
+</div>
+</div> 
+
+
+ <div class="container" id="custom-cards" style="margin-top:30px;" >
+      <br><br>
+      <p style="color: black; font-size: 24px; margin-bottom: -10px; text-align: center;">Discover</p>
+      <h1 class="text-center" style="font-size: 36px; font-weight: bold; color:rgba(233, 125, 34, 1);"> Our Exquisite Menu<hr></h1>
+	  <br>
+
+      <div class="row" >
+        <div class="col-md-3">
+          <center>
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/pizza2.jpg" alt="Card image"  data-target="#pizzaModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#pizzamodal" data-toggle="modal">Pizza</h5>
+				</a>
+				
+				  <div class="container">
+              <div class="modal fade" id="pizzamodal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Pizza</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+                          <table>
+							<tr>
+								<th>Pizza Name</th>
+								<th>Price</th>
+							</tr>
+							<tr>
+								<td>Margherita Pizza</td>
+								<td>$10.99</td>
+							</tr>
+							<tr>
+								<td>Pepperoni Pizza</td>
+								<td>$12.99</td>
+							</tr>
+							<tr>
+								<td>Hawaiian Pizza</td>
+								<td>$11.99</td>
+							</tr>
+							<tr>
+								<td>Veggie Supreme Pizza</td>
+								<td>$13.99</td>
+							</tr>
+							<tr>
+								<td>BBQ Chicken Pizza</td>
+								<td>$14.99</td>
+							</tr>
+							<tr>
+								<td>Meat Lovers Pizza</td>
+								<td>$15.99</td>
+							</tr>
+							<tr>
+								<td>Four Cheese Pizza</td>
+								<td>$13.49</td>
+							</tr>
+							<tr>
+								<td>Spinach and Feta Pizza</td>
+								<td>$12.49</td>
+							</tr>
+						</table>
+                           <center>
+								<h2 class="fraktur">Extra Toppings</h2>
+							</center>
+						  <!-- Pizza Toppings Table -->
+						<table>
+							<tr>
+								<th>Topping Name</th>
+								<th>Price</th>
+							</tr>
+							<tr>
+								<td>Extra Cheese</td>
+								<td>$1.50</td>
+							</tr>
+							<tr>
+								<td>Pepperoni</td>
+								<td>$1.00</td>
+							</tr>
+							<tr>
+								<td>Mushrooms</td>
+								<td>$0.75</td>
+							</tr>
+							<tr>
+								<td>Green Peppers</td>
+								<td>$0.60</td>
+							</tr>
+							<tr>
+								<td>Olives</td>
+								<td>$0.80</td>
+							</tr>
+							</table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </center>
+        </div>
+
+        <div class="col-md-3">
+          <center>
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/burger.jpg" alt="Card image"  data-target="#burgersModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#burgersModal" data-toggle="modal">Burgers</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="burgersModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Burgers</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+                          <table>
+							<tr>
+								<th>Burger Name</th>
+								<th>Price</th>
+							</tr>
+							<tr>
+								<td>Pineapple Delight</td>
+								<td>Rs. 80</td>
+							</tr>
+							<tr>
+								<td>Potato Heaven</td>
+								<td>Rs. 80</td>
+							</tr>
+							<tr>
+								<td>Baked Beans</td>
+								<td>Rs. 80</td>
+							</tr>
+							<tr>
+								<td>Yummy Special</td>
+								<td>Rs. 80</td>
+							</tr>
+							<tr>
+								<td>Veggie Burger</td>
+								<td>Rs. 45</td>
+							</tr>
+							<tr>
+								<td>Burger</td>
+								<td>Rs. 45</td>
+							</tr>
+							<tr>
+								<td>Without Cabbage Veggie Delight</td>
+								<td>Rs. 55</td>
+							</tr>
+							<tr>
+								<td>Mad Spicy</td>
+								<td>Rs. 55</td>
+							</tr>
+							<tr>
+								<td>Mushroom Burger</td>
+								<td>Rs. 55</td>
+							</tr>
+							<tr>
+								<td>Veggie King</td>
+								<td>Rs. 65</td>
+							</tr>
+							<tr>
+								<td>Paneer Delight</td>
+								<td>Rs. 65</td>
+							</tr>
+							<tr>
+								<td>Crispy Paneer</td>
+								<td>Rs. 65</td>
+							</tr>
+							</table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </center>
+        </div>
+
+        <div class="col-md-3">
+          <center>
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/drink.jpg" alt="Card image"  data-target="#drinkModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#drinkModal" data-toggle="modal">Drinks</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="drinkModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Drinks</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+                          <h2 class="fraktur">Shakes</h2>
+  <table>
+    <tr>
+      <th>Shake Name</th>
+      <th>Price (M)</th>
+      <th>Price (L)</th>
+    </tr>
+    <tr>
+      <td>Cheese Cake</td>
+      <td>Rs. 130</td>
+      <td>Rs. 180</td>
+    </tr>
+    <tr>
+      <td>Cookies</td>
+      <td>Rs. 130</td>
+      <td>Rs. 180</td>
+    </tr>
+    <tr>
+      <td>Doughnut Shake</td>
+      <td>Rs. 130</td>
+      <td>Rs. 180</td>
+    </tr>
+    <!-- Add more shake options as needed -->
+  </table>
+
+  <h2 class="fraktur">Coffee</h2>
+  <table>
+    <tr>
+      <th>Coffee Name</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Double Shot</td>
+      <td>Rs. 120</td>
+    </tr>
+    <tr>
+      <td>Cappuccino</td>
+      <td>Rs. 70</td>
+    </tr>
+    <tr>
+      <td>Latte</td>
+      <td>Rs. 90</td>
+    </tr>
+    <!-- Add more coffee options as needed -->
+  </table>
+
+  <h2 class="fraktur">Cold Drink</h2>
+  <table>
+    <tr>
+      <th>Cooler Name</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Blueberry Frost</td>
+      <td>Rs. 60</td>
+    </tr>
+    <tr>
+      <td>Apple Spitzer</td>
+      <td>Rs. 60</td>
+    </tr>
+    <tr>
+      <td>Cranberry Frost</td>
+      <td>Rs. 60</td>
+    </tr>
+    <!-- Add more cooler options as needed -->
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </center>
+        </div>
+          <div class="col-md-3">
+            <center>
+			
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/chinese.jpg" alt="Card image"  data-target="#chineseModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#chineseModal" data-toggle="modal">Chinese</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="chineseModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Chinese</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+                           <!-- Shakes Table -->
+  <table>
+    <tr>
+      <th>Chinese Dish Name</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Spring Roll</td>
+      <td>Rs. 130</td>
+    </tr>
+    <tr>
+      <td>Chopsuey</td>
+      <td>Rs. 130</td>
+    </tr>
+    <tr>
+      <td>Fried Rice with Assorted Veggies</td>
+      <td>Rs. 130</td>
+    </tr>
+    <tr>
+      <td>Veg Machurian (Dry/Gravy)</td>
+      <td>Rs. 140</td>
+    </tr>
+    <tr>
+      <td>Cheese Fingers</td>
+      <td>Rs. 140</td>
+    </tr>
+    <tr>
+      <td>Honey Chilli Potato</td>
+      <td>Rs. 140</td>
+    </tr>
+    <tr>
+      <td>Chilli Potato</td>
+      <td>Rs. 140</td>
+    </tr>
+    <tr>
+      <td>Cheese Chilli</td>
+      <td>Rs. 190</td>
+    </tr>
+    <tr>
+      <td>Cheese Corn Roll</td>
+      <td>Rs. 160</td>
+    </tr>
+    <tr>
+      <td>Cheese Shashik</td>
+      <td>Rs. 190</td>
+    </tr>
+    <tr>
+      <td>Mushroom Chilli</td>
+      <td>Rs. 190</td>
+    </tr>
+    <tr>
+      <td>Mushroom Duplex</td>
+      <td>Rs. 190</td>
+    </tr>
+    <tr>
+      <td>Veg Noodles</td>
+      <td>Rs. 130</td>
+    </tr>
+    <tr>
+      <td>Hakka Noodles</td>
+      <td>Rs. 130</td>
+    </tr>
+    <tr>
+      <td>Chilli Garlic</td>
+      <td>Rs. 130</td>
+    </tr>
+    <tr>
+      <td>Yummy Noodles</td>
+      <td>Rs. 170</td>
+    </tr>
+    <tr>
+      <td>Cheese Noodles</td>
+      <td>Rs. 150</td>
+    </tr>
+    <tr>
+      <td>Singapuri Noodles</td>
+      <td>Rs. 150</td>
+    </tr>
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            </center>
+          </div>
+
+          
+        </div>
+     </div>
+		
+ <div class="container" id="custom-cards" style="margin-top:30px;">
+      <div class="row" >
+        <div class="col-md-3">
+          <center>
+		  
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/c1.jpg" alt="Card image"  data-target="#cakeModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#cakeModal" data-toggle="modal">Cakes</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="cakeModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Cakes</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+                           <table>
+    <tr>
+      <th>Cake Name</th>
+      <th>Price (Rs.)</th>
+      <th>Weight (gm)</th>
+    </tr>
+    <tr>
+      <td>Chocolate Cake</td>
+      <td>Rs. 105 - Rs. 160</td>
+      <td>250 gm, 400 gm</td>
+    </tr>
+    <tr>
+      <td>Chocochip</td>
+      <td>Rs. 105 - Rs. 160</td>
+      <td>250 gm, 500 gm</td>
+    </tr>
+    <tr>
+      <td>Chocolate Muffin</td>
+      <td>Rs. 30</td>
+      <td>40 gm</td>
+    </tr>
+    <tr>
+      <td>Chocolate Walnut Teackae</td>
+      <td>Rs. 135 - Rs. 210</td>
+      <td>250 gm, 400 gm</td>
+    </tr>
+    <tr>
+      <td>Dry Fruit Cake</td>
+      <td>Rs. 50</td>
+      <td>250 gm</td>
+    </tr>
+    <tr>
+      <td>Marble Cake</td>
+      <td>Rs. 125 - Rs. 190</td>
+      <td>250 gm, 400 gm</td>
+    </tr>
+    <tr>
+      <td>Plum Cake</td>
+      <td>Rs. 180 - Rs. 385</td>
+      <td>280 gm, 550 gm</td>
+    </tr>
+    <tr>
+      <td>Redvelvet Muffin</td>
+      <td>Rs. 35</td>
+      <td>40 gm</td>
+    </tr>
+    <tr>
+      <td>Traditional Plum Cake (Rum)</td>
+      <td>Rs. 260 - Rs. 315</td>
+      <td>280 gm, 450 gm</td>
+    </tr>
+    <tr>
+      <td>Tuti Fruity Cake</td>
+      <td>Rs. 125 - Rs. 180</td>
+      <td>250 gm, 400 gm</td>
+    </tr>
+    <tr>
+      <td>Vanilla Cake</td>
+      <td>Rs. 90 - Rs. 135</td>
+      <td>250 gm, 400 gm</td>
+    </tr>
+    <tr>
+      <td>Vanilla Muffin</td>
+      <td>Rs. 30</td>
+      <td>40 gm</td>
+    </tr>
+    <tr>
+      <td>Walnut</td>
+      <td>Rs. 130 - Rs. 200</td>
+      <td>250 gm, 450 gm</td>
+    </tr>
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </center>
+        </div>
+
+        <div class="col-md-3">
+          <center>
+		  
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/cookie.jpg" alt="Card image"  data-target="#cookiesModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#cookiesModal" data-toggle="modal">Cookies</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="cookiesModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Cookies</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+                          <table>
+    <tr>
+      <th>Cookie Name</th>
+      <th>Price (Rs.)</th>
+      <th>Weight (g)</th>
+    </tr>
+    <tr>
+      <td>Butter Cookies</td>
+      <td>Rs. 125 - Rs. 160</td>
+      <td>300 g, 400 g</td>
+    </tr>
+    <tr>
+      <td>Coconut Cookies</td>
+      <td>Rs. 105 - Rs. 400</td>
+      <td>200 g, 400 g</td>
+    </tr>
+    <tr>
+      <td>Pista Cookies</td>
+      <td>Rs. 140 - Rs. 260</td>
+      <td>250 g, 500 g</td>
+    </tr>
+    <tr>
+      <td>Almond Cookies</td>
+      <td>Rs. 125 - Rs. 230</td>
+      <td>250 g, 500 g</td>
+    </tr>
+    <tr>
+      <td>Anzac Cookies</td>
+      <td>Rs. 115 - Rs. 240</td>
+      <td>250 g, 500 g</td>
+    </tr>
+    <tr>
+      <td>Jeera Cookies</td>
+      <td>Rs. 95 - Rs. 210</td>
+      <td>250 g, 500 g</td>
+    </tr>
+    <tr>
+      <td>Choco Cashew Cookies</td>
+      <td>Rs. 130 - Rs. 240</td>
+      <td>250 g , 500 g</td>
+    </tr>
+    <tr>
+      <td>Oatmeal</td>
+      <td>Rs. 80</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Muesli Cookies</td>
+      <td>Rs. 95 - Rs. 175</td>
+      <td>200 g, 400 g</td>
+    </tr>
+    <tr>
+      <td>Corn Flakes</td>
+      <td>Rs. 75 - Rs. 145</td>
+      <td>500 g</td>
+    </tr>
+    <tr>
+      <td>Australian Anzac</td>
+      <td>Rs. 30</td>
+      <td>60 g</td>
+    </tr>
+    <tr>
+      <td>Atta Cookies</td>
+      <td>Rs. 100 - Rs. 160</td>
+      <td>250 g, 400 g</td>
+    </tr>
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </center>
+        </div>
+
+        <div class="col-md-3">
+          <center>
+		  
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/desserts.jpg" alt="Card image"  data-target="#desertModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#desertModal" data-toggle="modal">Deserts</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="desertModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Deserts</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+   
+  <table>
+    <tr>
+      <th>Dessert Name</th>
+      <th>Price (Rs.)</th>
+    </tr>
+    <tr>
+      <td>Vanilla Waffle</td>
+      <td>Rs. 90</td>
+    </tr>
+    <tr>
+      <td>Chocolate Waffle</td>
+      <td>Rs. 90</td>
+    </tr>
+    <tr>
+      <td>Red Velvet Waffle</td>
+      <td>Rs. 120</td>
+    </tr>
+    <tr>
+      <td>Vanilla Chocolate Fudge</td>
+      <td>Rs. 30</td>
+    </tr>
+    <tr>
+      <td>Vanilla Strawberry Fudge</td>
+      <td>Rs. 30</td>
+    </tr>
+    <tr>
+      <td>Brownie</td>
+      <td>Rs. 90</td>
+    </tr>
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </center>
+        </div>
+          <div class="col-md-3">
+            <center>
+			
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/pasta.jpg" alt="Card image"  data-target="#pastaModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#pastaModal" data-toggle="modal">Pasta</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="pastaModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Pasta</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+   
+<table>
+    <tr>
+      <th>Pasta Name</th>
+      <th>Price (Rs.)</th>
+    </tr>
+    <tr>
+      <td>Tangy Tomato</td>
+      <td>Rs. 160</td>
+    </tr>
+    <tr>
+      <td>Creamy Mushroom</td>
+      <td>Rs. 160</td>
+    </tr>
+    <tr>
+      <td>Punjabi Tadka</td>
+      <td>Rs. 160</td>
+    </tr>
+    <tr>
+      <td>Yummy Special</td>
+      <td>Rs. 180</td>
+    </tr>
+    <tr>
+      <td>Basil</td>
+      <td>Rs. 180</td>
+    </tr>
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            </center>
+          </div>
+        </div>
+     </div>
+
+
+ <div class="container" id="custom-cards" style="margin-top:30px;">
+      <div class="row" >
+        <div class="col-md-3">
+          <center>
+		  
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/soup.jpg" alt="Card image"  data-target="#soupModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#soupaModal" data-toggle="modal">Soup</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="soupaModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Soup</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+   
+  <table>
+    <tr>
+      <th>Soup Name</th>
+      <th>Price (Rs.)</th>
+    </tr>
+    <tr>
+      <td>Tomato</td>
+      <td>Rs. 60</td>
+    </tr>
+    <tr>
+      <td>Veg Manchow</td>
+      <td>Rs. 60</td>
+    </tr>
+    <tr>
+      <td>Sweet Corn</td>
+      <td>Rs. 60</td>
+    </tr>
+    <tr>
+      <td>Lemon Coriander</td>
+      <td>Rs. 60</td>
+    </tr>
+    <tr>
+      <td>Hot & Sour</td>
+      <td>Rs. 60</td>
+    </tr>
+    <tr>
+      <td>Talumina</td>
+      <td>Rs. 60</td>
+    </tr>
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </center>
+        </div>
+
+        <div class="col-md-3">
+          <center>
+		  
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/salad.jpg" alt="Card image"  data-target="#saladaModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#saladaModal" data-toggle="modal">Salad</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="saladaModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Salad</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+   
+<table>
+    <tr>
+      <th>Salad Name</th>
+      <th>Price (Rs.)</th>
+    </tr>
+    <tr>
+      <td>Veg Salad</td>
+      <td>Rs. 140</td>
+    </tr>
+    <tr>
+      <td>Nachos</td>
+      <td>Rs. 140</td>
+    </tr>
+    <tr>
+      <td>Potato Salad</td>
+      <td>Rs. 160</td>
+    </tr>
+    <tr>
+      <td>Macaroni Salad</td>
+      <td>Rs. 160</td>
+    </tr>
+    <tr>
+      <td>Russian Salad</td>
+      <td>Rs. 180</td>
+    </tr>
+    <tr>
+      <td>Corn Salad</td>
+      <td>Rs. 170</td>
+    </tr>
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </center>
+        </div>
+
+        <div class="col-md-3">
+          <center>
+		  
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/choco.jpg" alt="Card image"  data-target="#chocoaModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#chocoaModal" data-toggle="modal">Chocolate</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="chocoaModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Chocolate</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+   
+<table>
+    <tr>
+      <th>Chocolate Name</th>
+      <th>Price (Rs.)</th>
+    </tr>
+    <tr>
+      <td>Assorted Chocolates</td>
+      <td>Rs. 100</td>
+    </tr>
+    <tr>
+      <td>Colorful White Lolly</td>
+      <td>Rs. 40</td>
+    </tr>
+    <tr>
+      <td>Dark Chocolate</td>
+      <td>Rs. 80</td>
+    </tr>
+    <tr>
+      <td>Licklollipop</td>
+      <td>Rs. 30</td>
+    </tr>
+    <tr>
+      <td>Milk Chocolate</td>
+      <td>Rs. 100</td>
+    </tr>
+    <tr>
+      <td>Teddy Bear Lollipop</td>
+      <td>Rs. 35</td>
+    </tr>
+    <tr>
+      <td>White Chocolate Lolly</td>
+      <td>Rs. 40</td>
+    </tr>
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </center>
+        </div>
+          <div class="col-md-3">
+            <center>
+			
+		  <a href="#" style="color:black; text-decoration: none;">
+              <img class="card-img-top anm" src="images/sand.jpg" alt="Card image"  data-target="#sandModal" data-toggle="modal">
+                <h5 class="card-title" data-target="#sandModal" data-toggle="modal">Sandwich</h5>
+				</a>
+				
+				  <div class="container">
+              <!-- Signup Modal -->
+              <div class="modal fade" id="sandModal">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <center>
+                        <h1 class="fraktur">Sandwich</h1>
+                      </center>
+                      <hr>
+                      <div class="form-section" id="lk">
+                        <form>
+   
+  <table>
+    <tr>
+      <th>Sandwich Name</th>
+      <th>Price (Rs.)</th>
+      <th>Ingredients</th>
+    </tr>
+    <tr>
+      <td>Simple Veg</td>
+      <td>Rs. 35</td>
+      <td>Cabbage, Onion, Capsicum</td>
+    </tr>
+    <tr>
+      <td>Mushroom Sandwich</td>
+      <td>Rs. 35</td>
+      <td>Mushroom, Capsicum, Onion</td>
+    </tr>
+    <tr>
+      <td>Pasta Sandwich</td>
+      <td>Rs. 50</td>
+      <td>Onion, Capsicum, Pan Pasta</td>
+    </tr>
+    <tr>
+      <td>Paneer Sandwich</td>
+      <td>Rs. 50</td>
+      <td>Tandoori Marine, Onion, Capsicum, Sauce</td>
+    </tr>
+    <tr>
+      <td>Paneer Pudina Sandwich</td>
+      <td>Rs. 50</td>
+      <td>Pudina, Marnita, Paneer, Onion, Capsicum</td>
+    </tr>
+    <tr>
+      <td>Golden Corn Sandwich</td>
+      <td>Rs. 50</td>
+      <td>Creamy Corn, Capsicum, Onion</td>
+    </tr>
+    <tr>
+      <td>Yummy Special Sandwich</td>
+      <td>Rs. 50</td>
+      <td>Onion, Capsicum, Mushroom, Jalapeno, Corn</td>
+    </tr>
+  </table>
+                          <br>
+                          <p class="text-center" data-dismiss="modal">close</p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            </center>
+          </div>
+        </div>
+     </div>
+	 
+	 
+	 
+
+ <footer class="footer ">
+ <div class="container-fluid" style="margin-top:10px">
+	<div class="row" id="a"> 
+		<div class="col-xl-3" id="b">  
+			<div style="width:250px height:350px">
+				<p class="text-center">
+					<img width="200" height="200" src="logo.jpeg" alt="pizza-five-eighths"/>
+					<br>
+				</p>
+			</div> 
+		</div>
+<div class="col-xl-2" >  
+	<div style="width:250px height:350px">
+		<h3 class="font-weight-bold text-warning">Get started</h3>
+			<ul class="list-group list-group-horizontal">
+				<li><a href="home.html#section1" class="foot">Home</a></li>
+				<li><a href="signup.html" class="foot">Signup</a></li>
+				<li><a href="menu.html" class="foot">Menu</a></li>
+			</ul>
+	</div> 
+	</div>
+
+
+<div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">About Us</h3>
+	<ul class="list-group list-group-horizontal">
+		<li><a href="about_us.html" class="foot">Company information</a></li>
+		<li><a href="contact_us.html" class="foot">Contact us</a></li>
+		<li><a href="home.html#reviews_section" class="foot">Reviews</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">Others</h3>
+	<ul class="list-group list-group-horizontal">
+		<li><a href="reservation.html" class="foot">Reservation</a></li>
+		<li><a href="home.html#combo" class="foot">Combos</a></li>
+		<li><a href="contact_us.html" class="foot">Address</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-3" id="a">  
+    <p class="card-text text-justify">
+	&nbsp&nbsp&nbsp
+	<a href="#" class="m"><img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/twitter--v1.png" alt="twitter--v1"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="20" height="20" src="https://img.icons8.com/ios-filled/30/facebook-f.png" alt="facebook-f"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="30" height="30" src="https://img.icons8.com/windows/30/google-plus.png" alt="google-plus"/>&nbsp&nbsp</a>
+	<br>
+	</p>
+	<a href="#"><button class="btn btn-danger  btn-rounded btn-lg">Contact us</button></a>
+	
+</div>
+	
+</div> 
+</div>
+
+ 
+</div>
+
+<div class="c-flex " style="background-color:rgba(0, 0, 0, 0.3)">
+  <p class="card-text text-center">&copy; 2023 My Website. Anmol Ashish.</p>
+</div>
+</div>
+</footer>
+
+
+
+</body>
+</html>

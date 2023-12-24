@@ -1,0 +1,473 @@
+<html>
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" type="text/css" href="bootstrap.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+    // Function to show the login modal and hide the signup modal
+    function showLoginModal() {
+      $('#signupModal').modal('hide');
+      $('#loginModal').modal('show');
+    }
+
+    // Function to show the signup modal and hide the login modal
+    function showSignupModal() {
+      $('#loginModal').modal('hide');
+      $('#signupModal').modal('show');
+    }
+
+    $(document).ready(function() {
+      // Call showLoginModal function when the "Login" link in the signup modal is clicked
+      $('#signupModal').on('click', '#loginLink', function() {
+        showLoginModal();
+      });
+
+      // Call showSignupModal function when the "Signup" link in the login modal is clicked
+      $('#loginModal').on('click', '#signupLink', function() {
+        showSignupModal();
+      });
+    });
+
+    // Remove modal backdrop when modal is closed
+    $(document).on('hidden.bs.modal', '.modal', function () {
+      $('.modal-backdrop').remove();
+    });
+  </script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne&family=Handlee&family=Allura&family=Great+Vibes&family=Pacifico&family=Homemade+Apple&family=Sacramento&display=swap');
+
+
+.fraktur {
+  font-family: 'Allura';
+  color: #ff971c;
+}
+
+
+
+#lk
+{
+	font-family: sans-serif;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+#lk .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="username"],
+.form-group input[type="password"],
+.form-group input[type="confirm_password"],
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 100%;
+}
+
+    /* Additional styles to make the login modal appear above the signup modal */
+    #loginModal {
+      z-index: 1200;
+    }
+
+
+img.a
+{
+	border-radius:20px;
+}
+
+.nav-links li a {
+  color:#672F02;
+  text-decoration: none;
+}
+
+/* Style for the active link */
+.nav-links li a.active {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* Hover effect for links */
+.nav-links li a:hover {
+  color: #ff4500;
+}
+
+
+#a{
+	padding:10px;
+}
+#b{
+	margin-top:-50px;
+}
+
+.footer {
+      background-color: #FDF4ED;
+      color: black;
+      padding: 30px 0 0 0;
+    }
+
+.footer p {
+      margin-bottom: 0;
+    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.btn-rounded {
+	  margin:10px;
+      border-radius: 25px;
+    }
+a.foot:link {
+  color:black;
+  text-decoration: none;
+}
+a.foot:visited 
+{
+color: black;
+ text-decoration: none;
+ }
+a.foot:hover 
+ {
+ color: #676868;
+ text-decoration: underline;
+ }
+ 
+ a.m
+ {
+	text-decoration: none;
+ }
+ 
+ #nl.jumbotron
+		{
+			border-radius:30px;
+			height:400px;
+			width:333px;
+			margin-top:120px;
+			margin-left:250px;
+			background-color:rgba(233, 125, 34, 0.6);
+		}
+ 
+ #my.jumbotron {
+      position: relative;
+      background-image: url('images/jumbo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    #my.jumbotron::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #my .content {
+      position: relative;
+      z-index: 1;
+    }
+	
+	.bob
+	{
+		border-radius:30px;
+		margin-top:60px;
+		margin-left:-100px;
+		background-color:rgba(233, 125, 34, 0.8);
+	}
+	
+	.img1
+	{
+		margin-top:-120px;
+		height:400px;
+		width:266px;
+		border-radius:10px;
+		margin-left:-400px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	
+	.img2
+	{
+		height:500px;
+		width:333px;
+		border-radius:10px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	
+	img.an
+	{
+		transition: transform 0.5s;
+	}
+	
+	.an:Hover{
+	 transform: scale(1.1); 
+	 }
+	 
+	@media (max-width: 777px)
+	{
+		.bob
+		{
+			margin-top:0px;
+			margin-left:0;
+		}
+		
+		.img1
+		{
+			margin:0px 0 0px -150px;
+			text-align:center;
+		}
+	
+		.img2
+		{
+			margin-top:20px;
+			height:400px;
+			width:266px;
+			margin:0px 0 0px 18%;
+			text-align: center;
+		}
+		
+		#nl.jumbotron
+		{
+			margin-top:0px;
+			width:0%;
+			height:0%;
+			margin:0px;
+			background-color:rgba(233, 125, 34, 0.0);
+		}
+	}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div id="section1">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:rgba(233, 125, 34, 0.9);">
+    <div class="container">
+      <a href="#" class="navbar-brand"><h2 style="color:#672F02"> YUM!</h2></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarid">
+        <ul class="navbar-nav text-center ml-auto">
+          <li class="nav-items">
+            <a href="index.html" class="nav-link ">Home</a>
+          </li>
+          <li class="nav-items">
+            <a href="about_us.html" class="nav-link active">About Us</a>
+          </li>
+          
+          <li class="nav-items">
+            <a href="menu.html" class="nav-link">Menu</a>
+          </li>
+		   <li class="nav-items">
+            <a href="offers.html" class="nav-link">Our Special Offers</a>
+          </li>
+          <li class="nav-items">
+            <a href="contact_us.html" class="nav-link">Contact</a>
+          </li>
+          
+          <li class="nav-items">
+            <a href="signup.php" class="nav-link" >Signup</a>
+          </li>
+		  <li class="nav-items">
+            <a href="login.php" class="nav-link" >Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="jumbotron " id="my">
+<div class="container" >
+<br><br>
+<center>
+ <div class="row" style="margin:50px; padding:30px;"> 
+  <div class="col-12"> 
+	<h1 class="card-text text-center" style="color:white;"> About us
+	</h1>
+</div> 
+
+
+</div>
+
+</center>
+</div>
+</div>  
+<!---- main content -->
+
+<div class="container" Style=" margin-top:100px;">
+	<div class="row">
+		<div class="col-xl-4">
+		<center>
+			<div class="jumbotron" id="nl"  >
+				<img class="an img1" src="images/about2.jpg">
+			</div>
+		</center>
+		</div>
+		<div class="col-xl-4">
+			<img class="an img2" src="images/about1.jpg">
+		</div>
+		<div class="col-xl-4">
+			<div class="jumbotron bob"  >
+			<small Style="color:white">ABOUT</small>
+			<h2 style="font-family:Dancing Script; color:yellow;" >Our Story</h2>
+			<p Style="color:white">Take a bite of any yummy product and you to would fall in love; with the food and the Baker as well.
+			This is no ordinary food, Jalandhar would vouch for that. 
+			After all, Yavid, the man behind Yummy Delicious Till The Last Bite is the one who gives his love story the form of Pizza, Pasta, Burgers, Shakes, Bakery and many other amazing savoury delights.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container" style="margin-top:50px;">
+
+<p>
+Welcome to YUM! an esteemed culinary destination where passion and innovation unite to create an unforgettable dining experience. With a commitment to excellence, we take pride in crafting artful dishes that tantalize the senses and captivate discerning palates.
+
+Our esteemed chefs curate each menu with meticulous attention to detail, sourcing the finest, locally-sourced ingredients to deliver gastronomic masterpieces. Immerse yourself in the enchanting ambiance, exuding sophistication and warmth, making every visit a cherished occasion.
+
+Dedicated to impeccable service, our attentive staff ensures personalized care, ensuring that each guest feels cherished and welcomed. Whether you seek an intimate dinner or a grand celebration, [Restaurant Name] promises to be an exceptional culinary journey that lingers in your memory.</p>
+</div>
+
+
+<div class="jumbotron" style="background-color:#E97D22;border-radius:100px 100px 0 0;margin-top:100px;  ">
+ <div class="row" style="margin:10px 20px 0px 20px"> 
+  <div class="col-xl-6" > 
+  <p style="color:yellow">Our team</p>
+  <h1 class="font-weight-bold " style="display:inline;">Meet The</h1>  <h1 style="display:inline; color:white">Team</h1><hr/>
+  
+  <p class="card-text">At the heart of YUM! lie its visionary creators, individuals who embody a passion for gastronomy and a commitment to redefining culinary experiences. With a collective expertise spanning decades, they have honed their craft, each possessing a unique culinary vision that harmoniously blends tradition and innovation.
+
+Their journey began with a shared dream—to create a dining haven that transcends expectations and fosters an unwavering sense of joy for all who visit. Their unwavering dedication to excellence and a relentless pursuit of perfection drive the restaurant's ethos, propelling it to the pinnacle of culinary distinction.
+
+Inspired by a profound love for food and an unwavering commitment to hospitality, the creators of [Restaurant Name] continue to push boundaries, elevating the dining landscape and making indelible marks on the culinary world. Their legacy is etched in every exquisite dish, every gracious gesture, and every moment of culinary bliss that guests experience. Their passion remains the guiding light, ensuring YUM! remains a beacon of culinary artistry for generations to come.
+	</p>
+  <a href="signup.html"><button type="button" class="btn btn-lg btn-warning" >Join Us</button></a>
+</div>
+
+<div class="col-xl-3" style="margin-top:10px;">  
+
+	<div style="width:350px height:500px">
+	<p class="text-center">
+	<img width="233" height="350" class="a an" src="images/chef4.jpeg" >
+	<br></p>
+	<h5 class="font-weight-bold text-center " >Sara Grant</h5>
+	<p class="card-text text-center" style="color:white"> Manager<br><br>
+	</p>
+</div> 
+</div> 
+
+<div class="col-xl-3" style="margin-top:10px;"> 
+	<div style="width:350px height:500px">
+	<p class="text-center">
+	<img width="233" height="350" class="a an" src="images/chef1.jpeg" >
+	<br></p>
+	<h5 class="font-weight-bold text-center" >Ashish</h5>
+	<p class="card-text text-center" style="color:white">Owner<br><br>
+	</p>
+</div> 
+</div> 
+</div> 
+</div> 
+
+
+ <footer class="footer ">
+ <div class="container-fluid" style="margin-top:10px">
+	<div class="row" id="a"> 
+		<div class="col-xl-3" id="b">  
+			<div style="width:250px height:350px">
+				<p class="text-center">
+					<img width="200" height="200" src="logo.jpeg" alt="pizza-five-eighths"/>
+					<br>
+				</p>
+			</div> 
+		</div>
+<div class="col-xl-2" >  
+	<div style="width:250px height:350px">
+		<h3 class="font-weight-bold text-warning">Get started</h3>
+			<ul class="list-group list-group-horizontal">
+				<li><a href="home.html#section1" class="foot">Home</a></li>
+				<li><a href="signup.html" class="foot">Signup</a></li>
+				<li><a href="menu.html" class="foot">Menu</a></li>
+			</ul>
+	</div> 
+	</div>
+
+
+<div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">About Us</h3>
+	<ul class="list-group list-group-horizontal">
+		<li><a href="about_us.html" class="foot">Company information</a></li>
+		<li><a href="contact_us.html" class="foot">Contact us</a></li>
+		<li><a href="home.html#reviews_section" class="foot">Reviews</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">Others</h3>
+	<ul class="list-group list-group-horizontal">
+		<li><a href="reservation.html" class="foot">Reservation</a></li>
+		<li><a href="home.html#combo" class="foot">Combos</a></li>
+		<li><a href="contact_us.html" class="foot">Address</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-3" id="a">  
+    <p class="card-text text-justify">
+	&nbsp&nbsp&nbsp
+	<a href="#" class="m"><img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/twitter--v1.png" alt="twitter--v1"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="20" height="20" src="https://img.icons8.com/ios-filled/30/facebook-f.png" alt="facebook-f"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="30" height="30" src="https://img.icons8.com/windows/30/google-plus.png" alt="google-plus"/>&nbsp&nbsp</a>
+	<br>
+	</p>
+	<a href="#"><button class="btn btn-danger  btn-rounded btn-lg">Contact us</button></a>
+	
+</div>
+	
+</div> 
+</div>
+
+ 
+</div>
+
+<div class="c-flex " style="background-color:rgba(0, 0, 0, 0.3)">
+  <p class="card-text text-center">&copy; 2023 My Website. Anmol Ashish.</p>
+</div>
+</div>
+</footer>
+
+
+
+
+
+</body>
+</html>

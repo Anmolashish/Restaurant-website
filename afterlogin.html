@@ -1,0 +1,1024 @@
+<html>
+<head>
+<title>Bootstrap</title>
+<!--<link rel="stylesheet" type="text/css" href="bootstrap.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+    // Function to show the login modal and hide the signup modal
+    function showLoginModal() {
+      $('#signupModal').modal('hide');
+      $('#loginModal').modal('show');
+    }
+
+    // Function to show the signup modal and hide the login modal
+    function showSignupModal() {
+      $('#loginModal').modal('hide');
+      $('#signupModal').modal('show');
+    }
+
+    $(document).ready(function() {
+      // Call showLoginModal function when the "Login" link in the signup modal is clicked
+      $('#signupModal').on('click', '#loginLink', function() {
+        showLoginModal();
+      });
+
+      // Call showSignupModal function when the "Signup" link in the login modal is clicked
+      $('#loginModal').on('click', '#signupLink', function() {
+        showSignupModal();
+      });
+    });
+
+    // Remove modal backdrop when modal is closed
+    $(document).on('hidden.bs.modal', '.modal', function () {
+      $('.modal-backdrop').remove();
+    });
+  </script>
+  
+  
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne&family=Handlee&family=Allura&family=Great+Vibes&family=Pacifico&family=Homemade+Apple&family=Sacramento&display=swap');
+
+.fraktur {
+  font-family: 'Allura';
+  color: #ff971c;
+}
+
+
+
+#lk
+{
+	font-family: sans-serif;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+#lk .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="username"],
+.form-group input[type="password"],
+.form-group input[type="confirm_password"],
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 100%;
+}
+
+	
+#a{
+	padding:10px;
+}
+#b{
+	margin-top:-50px;
+}
+
+.footer {
+      background-color: #FDF4ED;
+      color: black;
+      padding: 30px 0 0 0;
+    }
+
+.footer p {
+      margin-bottom: 0;
+    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.btn-rounded {
+	  margin:10px;
+      border-radius: 25px;
+    }
+a.foot:link {
+  color:black;
+  text-decoration: none;
+}
+a.foot:visited 
+{
+color: black;
+ text-decoration: none;
+ }
+a.foot:hover 
+ {
+ color: #676868;
+ text-decoration: underline;
+ }
+ 
+ a.m
+ {
+	text-decoration: none;
+ }
+ 
+ img.mixi{
+	mix-blend-mode: multiply;
+ }
+ 
+ img#an
+{
+	border-radius:30px;
+}
+
+ .container-fluid {
+    padding: 0;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    text-align: left;
+    z-index: 1; /* Place caption above the image */
+  }
+
+  .text-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* Cover the entire width */
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradient overlay from 0.7 to 0 opacity */
+    z-index: 2; 
+  }
+
+  .caption-content {
+	text-align:center;
+    padding:380px 120px;
+  }
+
+  .caption h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+	.ps{
+		display:inline;
+	}
+	
+  .caption p {
+    font-size: 18px;
+  }
+  #nov
+  {
+	width:100%;
+  }
+  
+.nav-links li a {
+  color:#672F02;
+  text-decoration: none;
+}
+
+/* Style for the active link */
+.nav-links li a.active {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* Hover effect for links */
+.nav-links li a:hover {
+  color: #ff4500;
+}
+
+
+  
+@media (max-width: 1468px) {
+	.caption-content {
+      padding: 80px 20px; /* Reduce the top and bottom padding for smaller screens */
+    }
+    
+	
+	
+    .display-1 h1 {
+      font-size: 10%; /* Reduce the font size of h2 for smaller screens */
+    }
+    
+    .caption p {
+      font-size: 5px; /* Reduce the font size of p for smaller screens */
+    }
+
+    #myslider .carousel-item img {
+      object-fit: cover; /* Crop the image without stretching */
+      height: 100vh; /* Increase the height to full viewport height */
+    }
+	
+
+  }
+  
+  	.testimonial-card {
+    width: 300px;
+    height: 360px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 50px;
+    padding: 20px;
+  }
+
+  .testimonial-card img {
+    border-radius: 20px;
+	margin:0px;
+	padding:0px;
+  }
+
+  .testimonial-card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #carouselTestimonials {
+	align:center;
+    width: 60%;
+  }
+	
+	
+#carouselTestimonials .carousel-control-prev-icon {
+	background-image: url('https://img.icons8.com/ios-filled/50/back.png');
+}
+
+#carouselTestimonials .carousel-control-next-icon {
+  background-image: url('https://img.icons8.com/ios-filled/50/forward--v1.png');
+  
+  
+}
+
+  
+  section
+{
+width:80%;
+display:flex;
+}
+.first
+{
+flex:2;
+font-size:13px;
+}
+.second
+{
+flex:5;
+font-size:13px;
+}
+
+#carouselTestimonials .carousel-indicators li {
+    /* Add your custom styles for the indicators */
+    width: 15px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+  }
+
+  #carouselTestimonials .carousel-indicators .active {
+    /* Add your custom styles for the active indicator */
+    background-color: blue;
+  }
+  
+#custom-cards .card {
+    border-radius: 10px;
+    border: none;
+    max-width: 250px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+
+  #custom-cards .card-img-top {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+
+  #custom-cards .card-body {
+    padding: 15px;
+  }
+
+  #custom-cards .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* Update the body background with a gradient */
+  
+  .mo {
+      position: relative;
+      background-image: url('images/back.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 100vh; /* Adjust the height as needed */
+    }
+
+   .mo::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    /* Style for the content inside the .mo container */
+    .mo .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Adjust the text color and styles for .mo container */
+
+    /* Reduce the margin between columns to make cards closer together */
+    #custom-cards .row {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    #custom-cards .col-md-4 {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+	
+	#re{
+		height:18vh;
+	}
+	
+	@media (max-width: 1477px) {
+      .mo {
+       object-fit: cover; /* Crop the image without stretching */
+	   height:auto;
+		min-height:height: 100vh; /* Increase the height to full viewport height */
+      }
+	  #re.mo
+	  {
+		object-fit: cover; /* Crop the image without stretching */
+		height:auto;
+		min-height:height: 100vh; /* Increase the height to full viewport height */
+	  }
+    }
+	.anm{
+		transition: transform 0.5s;
+	}
+	
+	img.anm
+	{
+		transition: transform 0.5s;
+	}
+	
+	.anm:Hover{
+	 transform: scale(1.1); 
+	 }
+  
+</style>
+<body>
+<div id="section1">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:rgba(233, 125, 34, 0.9);">
+    <div class="container">
+      <a href="#" class="navbar-brand"><h2 style="color:#672F02"> YUM!</h2></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarid">
+        <ul class="navbar-nav text-center ml-auto">
+          <li class="nav-items">
+            <a href="afterlogin.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-items">
+            <a href="afterabout.html" class="nav-link">About Us</a>
+          </li>
+          
+          <li class="nav-items">
+            <a href="aftermenu.html" class="nav-link">Menu</a>
+          </li>
+        
+          <li class="nav-items">
+            <a href="afterreservation.php" class="nav-link">Reservation</a>
+          </li>
+            <li class="nav-items">
+            <a href="index.html" class="nav-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container-fluid">
+    <div class="carousel slide" id="myslider" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img  src="images/1.jpg" style="width: 100%; height: 100%;" alt="Background Image">
+          <div class="carousel-caption">
+            <div class="text-layer">
+              <div class="caption-content">
+                <h1 class="display-1 ps">Welcome to </h1>
+				<h1 class="display-1 ps" style="color:#F8C001;margin-top:-10px;">YUM!</h1>
+				<h5 style="color:white; margin-top:10px;" >Savor the Flavors | Delight in Elegance | Embrace Memorable Moments</h5>
+				<a href="menu.html"><button type="button" class="btn btn-warning"style="margin-top:20px;">Explore Our Menu</button></a>
+              </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item ">
+          <img src="images/2.jpg" style="width: 100%; height: 100%;" alt="Background Image">
+          <div class="carousel-caption">
+            <div class="text-layer">
+              <div class="caption-content">
+                <h1 class="display-2 ps">Indulge in </h1>
+				<h1 class="display-2 ps" style="color:#F8C001;margin-top:-10px;"> Culinary </h1>
+				<h1 class="display-2 ps"> Delights </h1>
+				<h5 style="color:white; margin-top:10px;" >Crafted with Love | Fresh Ingredients | Unparalleled Taste</h5>
+				<a href="reservation.html"><button type="button" class="btn btn-warning"style="margin-top:20px;">Book a Table</button></a>
+              </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item" >
+          <img src="images/3.jpg" style="width: 100%; height: 100%;" alt="Background Image">
+          <div class="carousel-caption">
+            <div class="text-layer">
+              <div class="caption-content" Style="margin-top:-70px;">
+                <h1 class="display-2 ps">An Unforgettable Culinary   </h1>
+				<h1 class="display-2 ps" style="color:#F8C001;margin-top:-10px;"> <br>Journey </h1>
+				<h1 class="display-2 ps"> Awaits </h1>
+				<h5 style="color:white; margin-top:10px;" >Rediscover Your Palate | Unleash Culinary Wonders | A Feast Like No Other</h5>
+				<a href="#combo"><button type="button" class="btn btn-warning"style="margin-top:20px;">Explore Signature Dishes</button></a>
+              </div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item " >
+          <img src="images/4.jpg" style="width: 100%; height: 100%;" alt="Background Image">
+          <div class="carousel-caption">
+            <div class="text-layer">
+              <div class="caption-content" Style="margin-top:-70px;">
+                <h1 class="display-2 ps">Catering Services for </h1>
+				<h1 class="display-2 ps"> <br> Your </h1>
+				<h1 class="display-2 ps" style="color:#F8C001;margin-top:-10px;">Special </h1>
+				<h1 class="display-2 ps">  Events </h1>
+				<h5 style="color:white; margin-top:10px;" >Celebrations Made Extraordinary | Culinary Experiences for Every Occasion</h5>
+				<a href="contact_us.html"><button type="button" class="btn btn-warning"style="margin-top:20px;">Contact Us</button></a>
+              </div>
+      </div>
+    </div>
+  </div>
+</div>
+	<ul class="carousel-indicators">
+        <li data-target="#myslider" data-slide-to="0" class="active"></li>
+        <li data-target="#myslider" data-slide-to="1"></li>
+        <li data-target="#myslider" data-slide-to="2"></li>
+        <li data-target="#myslider" data-slide-to="3"></li>
+        <li data-target="#myslider" data-slide-to="4"></li>
+      </ul>
+      <a href="#myslider" data-slide="prev" class="carousel-control-prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a href="#myslider" data-slide="next" class="carousel-control-next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+</div>
+</div>
+
+
+
+
+<div class="container" style="background-color" >
+
+ <div class="row" style="margin:100px 0px"> 
+  <div class="col-xl-6" >  <center>
+	<img  src="95.jpeg" class="img-fluid img-rounded anm" id="an" > 
+	</center>
+</div> 
+
+
+  <div class="col-xl-6" > 
+  <h1 >Food! You won't Find<br> Anywhere Else with Best Quality</h1>
+  <h1  style="color:#F8C001">Ingredients</h1>
+  <p class="card-text">Discover an unparalleled culinary experience at our establishment. Our exclusive menu offers a gastronomic journey with exceptional ingredients, ensuring the finest quality that sets us apart from the rest.
+	</p>
+  <a href="menu.html"><button type="button" class="btn btn-warning">Explore Our Exquisite Menu</button></a>
+</div>
+
+
+</div>
+</div> 
+
+
+
+<div class="mo" id="re">
+<div class="container" >
+<br><br>
+
+ <div class="row " style="margin-bottom:50px;margin-top:-50px; padding:30px;"> 
+  <div class="col-xl-8" style="padding-left:100px;"> 
+	<h2 class="card-text"> Do you want to Contact with us. Then Don't Hesitate
+	</h2>
+</div> 
+
+
+  <div class="col-xl-4" style="padding-left:100px; padding-top:5px;"> 
+  <a href="contact_us.html" ><button type="button" class="btn btn-white" style="color:#F8C001">Contact us</button></a>
+
+</div>
+
+
+</div>
+</div> 
+</div> 
+
+
+
+
+<div class="container" >
+<br><br>
+<h6 class="card-text text-center" >Why we are the best</h6>
+<h1 class=" text-center">4 Reasons to Choose us</h1><br><br><br>
+
+ <div class="row"> 
+  <div class="col-xl-3 anm" >  
+
+	<div style="width:250px height:350px">
+	<p class="text-center">
+	<img width="38" height="38" src="https://img.icons8.com/color/48/food-and-wine.png" alt="food-and-wine"/>
+	<br></p>
+	<h4 class="font-weight-bold text-center">Gourmet Delicacies </h4>
+	<p class="card-text text-justify"> Savor a diverse array of meticulously crafted dishes, showcasing culinary expertise, and thoughtfully selected ingredients, elevating every dining experience to perfection<br><br>
+	</p>
+	
+</div> 
+</div> 
+
+
+  <div class="col-xl-3 anm" >  
+
+	<div style="width:250px height:350px">
+	<p class="text-center">
+	<img width="38" height="38" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/38/external-hospitality-hospitality-services-flaticons-lineal-color-flat-icons-2.png" alt="external-hospitality-hospitality-services-flaticons-lineal-color-flat-icons-2"/>
+	<br></p>
+	<h4 class="font-weight-bold text-center">Impeccable Service</h4>
+	<p class="card-text text-justify"> Our attentive and knowledgeable staff ensures personalized service, creating a welcoming ambiance, while meeting and exceeding the needs of every discerning guest<br><br>
+	</p>
+	
+</div> 
+</div>
+
+  <div class="col-xl-3 anm" >  
+
+	<div style="width:250px height:350px">
+	<p class="text-center">
+	<img width="38" height="38" src="https://img.icons8.com/fluency/48/spring-roll.png" alt="spring-roll"/>
+	<br></p>
+	<h4 class="font-weight-bold text-center">Enchanting Ambiance </h4>
+	<p class="card-text text-justify"> Embrace a sophisticated and charming setting, where a harmonious blend of aesthetics and comfort fosters an unforgettable dining atmosphere, perfect for cherished moments and special occasions<br><br>
+	</p>
+	
+</div> 
+</div>
+
+  <div class="col-xl-3 anm" >  
+
+	<div style="width:250px height:350px">
+	<p class="text-center">
+	<img width="38" height="38" src="https://img.icons8.com/external-flaticons-flat-flat-icons/38/external-catering-foodies-flaticons-flat-flat-icons.png" alt="external-catering-foodies-flaticons-flat-flat-icons"/>
+	<br></p>
+	<h4 class="font-weight-bold text-center">Catering Excellence</h4>
+	<p class="card-text text-justify">  Elevate your events with our bespoke catering, offering an unparalleled culinary journey that caters to diverse palates, ensuring cherished memories that linger for a lifetime<br><br>
+	</p>
+	
+</div> 
+</div>
+
+ 
+</div>
+<br><br><br>
+</div>
+
+
+<div class="mo" >
+<div class="container">
+<br><br>
+<h6 class="card-text text-center" style="color:#672F02;margin-bottom:-10px;" >Expert and skillful</h6><hr>
+<h1 class=" text-center" style="margin-top:-20px;">Our Experinced Chefs</h1><br><br><br>
+
+ <div class="row" > 
+  <div class="col-xl-3" >  
+
+	<div style="width:350px height:500px">
+	<p class="text-center">
+	<img class="anm" width="266" height="400" src="images/chef1.jpeg" style="border-radius:30px" >
+	<br></p>
+	<h5 class="font-weight-bold text-center">Anmol Ashish</h5>
+	<p class="card-text text-center"> Experinced Chef/owner<br><br>
+	</p>
+	
+</div> 
+</div> 
+
+
+  <div class="col-xl-3" >  
+
+	<div style="width:3500px height:500px">
+	<p class="text-center">
+	<img class="anm" width="266" height="400" src="images/chef2.jpeg" style="border-radius:30px" >
+	<br></p>
+	<h5 class="font-weight-bold text-center">Claire olsen</h5>
+	<p class="card-text text-center"> Experinced Chef<br><br>
+	</p>
+</div> 
+</div>
+
+  <div class="col-xl-3" >  
+
+	<div style="width:350px height:500px">
+	<p class="text-center">
+	<img class="anm" width="266" height="400" src="images/chef3.jpg" style="border-radius:30px" >
+	<br></p>
+	<h5 class="font-weight-bold text-center">Phillip hunt</h5>
+	<p class="card-text text-center"> Manager<br><br>
+	</p>
+	
+</div> 
+</div>
+
+  <div class="col-xl-3" >  
+
+	<div style="width:350px height:500px">
+	<p class="text-center">
+	<img class="anm" width="266" height="400" src="images/chef4.jpeg" style="border-radius:30px">
+	<br></p>
+	<h5 class="font-weight-bold text-center">Sara Grant</h5>
+	<p class="card-text text-center"> Experinced Staff<br><br>
+	</p>
+	
+</div> 
+</div>
+</div>
+</div>
+</div>
+
+<div id="combo">
+    <div class="container" id="custom-cards" style="margin-top:30px;" >
+      <br><br>
+      <p style="color: black; font-size: 24px; margin-bottom: -10px; text-align: center;">Our</p>
+      <h1 class="text-center" style="font-size: 36px; font-weight: bold; color:rgba(233, 125, 34, 1);"> Most Famous Dishes<hr></h1><br>
+
+      <div class="row" >
+        <div class="col-md-4">
+          <center>
+		  <a href="menu.html" style="color:black; text-decoration: none;">
+            <div class="card anm">
+              <img class="card-img-top anm" src="images/burger.jpg" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title">Burgers<hr></h5>
+                <p class="card-text">Delicious and mouthwatering burgers with a variety of flavors.</p>
+              </div>
+            </div>
+		  </a>
+          </center>
+        </div>
+
+        <div class="col-md-4">
+          <center>
+		  <a href="menu.html" style="color:black; text-decoration: none;">
+            <div class="card anm">
+              <img class="card-img-top anm" src="images/pizza2.jpg" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title">Pizzas<hr></h5>
+                <p class="card-text">Authentic Italian pizzas made with fresh ingredients and love.</p>
+              </div>
+            </div>
+			</a>
+          </center>
+        </div>
+
+        <div class="col-md-4">
+          <center>
+		  <a href="menu.html" style="color:black; text-decoration: none;">
+            <div class="card anm" >
+              <img class="card-img-top anm" src="images/sushi.jpg" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title">Sushi<hr></h5>
+                <p class="card-text">Exquisite and delicate sushi rolls crafted by our talented chefs.</p>
+              </div>
+            </div>
+			</a>
+          </center>
+        </div>
+      </div>
+
+      <div class="container">
+        <br><br>
+        <div class="row" >
+          <div class="col-md-4">
+            <center>
+			<a href="menu.html" style="color:black; text-decoration: none;">
+              <div class="card anm" style="margin-bottom: 100px;">
+                <img class="card-img-top anm" src="images/steak.jpg" alt="Card image">
+                <div class="card-body">
+                  <h5 class="card-title">Steaks<hr></h5>
+                  <p class="card-text">Juicy and succulent steaks served with delectable sides.</p>
+                </div>
+              </div>
+			  </a>
+            </center>
+          </div>
+
+          <div class="col-md-4">
+            <center>
+			<a href="menu.html" style="color:black; text-decoration: none;">
+              <div class="card anm" style="margin-bottom: 100px;">
+                <img class="card-img-top anm" src="images/desserts.jpg" alt="Card image">
+                <div class="card-body">
+                  <h5 class="card-title">Desserts<hr></h5>
+                  <p class="card-text">Indulgent desserts that will satisfy your sweet cravings.</p>
+                </div>
+              </div>
+			  </a>
+            </center>
+          </div>
+
+          <div class="col-md-4">
+            <center>
+			<a href="menu.html" style="color:black; text-decoration: none;">
+              <div class="card anm" style="margin-bottom: 100px;">
+                <img class="card-img-top anm" src="images/drink.jpg" alt="Card image">
+                <div class="card-body">
+                  <h5 class="card-title">Drinks<hr></h5>
+                  <p class="card-text">Refreshing and delightful drinks to complement meal.</p>
+                </div>
+              </div>
+			  </a>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<div id="reviews_section">
+
+<div class="container-fluid" style="background-color: rgba(233, 125, 34, 0.5);">
+    <br><br>
+    <center>
+      <h1 class="font-weight-lighter text-center">Reviews</h1>
+      <h1 class="font-weight-bold text-center">& Comments</h1>
+    </center>
+    <br><br><br>
+    <div id="carouselTestimonials" class="carousel slide mx-auto" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="testimonial-card">
+			<h5 class="font-weight-bold text-center">Food Enthusiast</h5>
+            <p style=" margin-top:-10px"><hr><center>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/></center>
+			<br>
+			Embarking on an enchanting culinary journey, this gastronomic gem dazzles with exquisite flavors and impeccable service, artfully delighting the senses. An unforgettable experience!
+            </p>
+				<section>
+					<div class="first">
+						<p class="card-text text-center">
+							<img  width="40" height="40" src="images/dp1.jpeg" >
+						</p>
+					</div>
+					<div class="second">
+						<dl>
+							<dt>Theo Hall</dt>
+							<dd>Food specialist</dd>
+						</dl>
+					</div>
+				</section>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial-card">
+			<h5 class="font-weight-bold text-center">Gourmet Reviewer</h5>
+            <p class="text-justify" style=" margin-top:-10px"><hr><center>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/></center>
+			<br>
+			Unparalleled dining perfection, where flavors dance gracefully, and service shines. A culinary marvel, leaving lasting impressions with every exquisite bite. Phenomenal!
+            </p>
+				<section>
+					<div class="first">
+						<p class="card-text text-center">
+							<img width="40" height="40" src="images/dp2.jpeg" >
+						</p>
+					</div>
+					<div class="second">
+						<dl>
+							<dt>James Andrews</dt>
+							<dd>Food specialist</dd>
+						</dl>
+					</div>
+				</section>
+          </div>
+        </div>
+		<div class="carousel-item">
+          <div class="testimonial-card">
+			<h5 class="font-weight-bold text-center">Epicurean Gazette</h5>
+            <p class="text-justify" style=" margin-top:-10px"><hr><center>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/></center>
+			<br>
+			Indulgent elegance awaits as guests are embraced in a symphony of tantalizing tastes and delightful textures. Culinary finesse and warm hospitality create a truly unforgettable dining affair!
+            </p>
+				<section>
+					<div class="first">
+						<p class="card-text text-center">
+							<img width="40" height="40" src="images/t2.jpg" >
+						</p>
+					</div>
+					<div class="second">
+						<dl>
+							<dt>Michelle Chen</dt>
+							<dd>Food specialist</dd>
+						</dl>
+					</div>
+				</section>
+          </div>
+        </div>
+		<div class="carousel-item">
+          <div class="testimonial-card">
+			<h5 class="font-weight-bold text-center">Event Connoisseur</h5>
+            <p class="text-justify" style=" margin-top:-10px"><hr><center>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/></center>
+			<br>
+			Savor the allure of artful indulgence where flavors and textures intertwine in perfect harmony. A culinary masterpiece, leaving hearts captivated and taste buds enchanted. 
+            </p>
+				<section>
+					<div class="first">
+						<p class="card-text text-center">
+							<img width="40" height="40" src="images/t1.jpg" >
+						</p>
+					</div>
+					<div class="second">
+						<dl>
+							<dt>Michael Sullivan</dt>
+							<dd>Food specialist</dd>
+						</dl>
+					</div>
+				</section>
+          </div>
+        </div>
+		<div class="carousel-item">
+          <div class="testimonial-card">
+			<h5 class="font-weight-bold text-center">Culinary Aficionado</h5>
+            <p class="text-justify" style=" margin-top:-10px"><hr><center>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/>
+			<img width="30" height="30" src="https://img.icons8.com/fluency/48/star.png" alt="star"/></center>
+			<br>
+			An extraordinary gastronomic odyssey, where exquisite flavors and impeccable presentation intertwine. A culinary tapestry woven with passion and precision, leaving patrons with unforgettable memories.
+            </p>
+				<section>
+					<div class="first">
+						<p class="card-text text-center">
+							<img width="40" height="40" src="images/t3.jpg" >
+						</p>
+					</div>
+					<div class="second">
+						<dl>
+							<dt>Alexandra Brooks</dt>
+							<dd>Food specialist</dd>
+						</dl>
+					</div>
+				</section>
+          </div>
+        </div>
+      </div>
+	  <ul class="carousel-indicators d-none d-md-flex">
+        <li data-target="#myslider" data-slide-to="0" class="active"></li>
+        <li data-target="#myslider" data-slide-to="1"></li>
+        <li data-target="#myslider" data-slide-to="2"></li>
+        <li data-target="#myslider" data-slide-to="3"></li>
+        <li data-target="#myslider" data-slide-to="4"></li>
+      </ul>
+      <a class="carousel-control-prev" href="#carouselTestimonials" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselTestimonials" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <br><br><br>
+  </div>
+  </div>
+
+
+
+
+
+
+ <footer class="footer ">
+ <div class="container" style="margin-top:10px">
+	<div class="row" id="a"> 
+		<div class="col-xl-3" id="b">  
+			<div style="width:250px height:350px">
+				<p class="text-center">
+					<img width="200" height="200" src="logo.jpeg" alt="pizza-five-eighths"/>
+					<br>
+				</p>
+			</div> 
+		</div>
+<div class="col-xl-2" >  
+	<div style="width:250px height:350px">
+		<h3 class="font-weight-bold text-warning">Get started</h3>
+			<ul class="list-group list-group-horizontal">
+				<li><a href="home.html#section1" class="foot">Home</a></li>
+				<li><a href="signup.html" class="foot">Signup</a></li>
+				<li><a href="menu.html" class="foot">Menu</a></li>
+			</ul>
+	</div> 
+	</div>
+
+
+<div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">About Us</h3>
+	<ul class="list-group list-group-horizontal">
+		<li><a href="about_us.html" class="foot">Company information</a></li>
+		<li><a href="contact_us.html" class="foot">Contact us</a></li>
+		<li><a href="home.html#reviews_section" class="foot">Reviews</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">Others</h3>
+	<ul class="list-group list-group-horizontal">
+		<li><a href="reservation.html" class="foot">Reservation</a></li>
+		<li><a href="home.html#combo" class="foot">Combos</a></li>
+		<li><a href="contact_us.html" class="foot">Address</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-3" id="a">  
+    <p class="card-text text-justify">
+	&nbsp&nbsp&nbsp
+	<a href="#" class="m"><img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/twitter--v1.png" alt="twitter--v1"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="20" height="20" src="https://img.icons8.com/ios-filled/30/facebook-f.png" alt="facebook-f"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="30" height="30" src="https://img.icons8.com/windows/30/google-plus.png" alt="google-plus"/>&nbsp&nbsp</a>
+	<br>
+	</p>
+	<a href="#"><button class="btn btn-danger  btn-rounded btn-lg">Contact us</button></a>
+	
+</div>
+	
+</div> 
+</div>
+
+ 
+</div>
+
+<div class="c-flex " style="background-color:rgba(0, 0, 0, 0.3)">
+  <p class="card-text text-center">&copy; 2023 My Website. Anmol Ashish.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>

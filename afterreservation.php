@@ -1,0 +1,375 @@
+
+<html>
+<head>
+<title>Get in Touch</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" type="text/css" href="bootstrap.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+    // Function to show the login modal and hide the signup modal
+    function showLoginModal() {
+      $('#signupModal').modal('hide');
+      $('#loginModal').modal('show');
+    }
+
+    // Function to show the signup modal and hide the login modal
+    function showSignupModal() {
+      $('#loginModal').modal('hide');
+      $('#signupModal').modal('show');
+    }
+
+    $(document).ready(function() {
+      // Call showLoginModal function when the "Login" link in the signup modal is clicked
+      $('#signupModal').on('click', '#loginLink', function() {
+        showLoginModal();
+      });
+
+      // Call showSignupModal function when the "Signup" link in the login modal is clicked
+      $('#loginModal').on('click', '#signupLink', function() {
+        showSignupModal();
+      });
+    });
+
+    // Remove modal backdrop when modal is closed
+    $(document).on('hidden.bs.modal', '.modal', function () {
+      $('.modal-backdrop').remove();
+    });
+  </script>
+  
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne&family=Handlee&family=Allura&family=Great+Vibes&family=Pacifico&family=Homemade+Apple&family=Sacramento&display=swap');
+
+.fraktur {
+  font-family: 'Allura';
+  color: #ff971c;
+}
+
+
+
+#lk
+{
+	font-family: sans-serif;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+#lk .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="username"],
+.form-group input[type="password"],
+.form-group input[type="confirm_password"],
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 100%;
+}
+
+
+    /* Additional styles to make the login modal appear above the signup modal */
+    #loginModal {
+      z-index: 1200;
+    }
+
+
+#l
+{
+	font-family: sans-serif;
+	margin: 100px auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+#n .form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+#l .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="no"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #ccc;
+  width: 100%;
+}
+
+.nav-links li a {
+  color:#672F02;
+  text-decoration: none;
+}
+
+/* Style for the active link */
+.nav-links li a.active {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* Hover effect for links */
+.nav-links li a:hover {
+  color: #ff4500;
+}
+
+
+#a{
+	padding:10px;
+}
+#b{
+	margin-top:-50px;
+}
+
+.footer {
+      background-color: #FDF4ED;
+      color: black;
+      padding: 30px 0 0 0;
+    }
+
+.footer p {
+      margin-bottom: 0;
+    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.btn-rounded {
+	  margin:10px;
+      border-radius: 25px;
+    }
+a.foot:link {
+  color:black;
+  text-decoration: none;
+}
+a.foot:visited 
+{
+color: black;
+ text-decoration: none;
+ }
+a.foot:hover 
+ {
+ color: #676868;
+ text-decoration: underline;
+ }
+ 
+ a.m
+ {
+	text-decoration: none;
+ }
+ 
+ 
+  #my.jumbotron {
+      position: relative;
+      background-image: url('images/jumbo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    #my.jumbotron::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #my .content {
+      position: relative;
+      z-index: 1;
+    }
+</style>
+<body>
+<div id="section1">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:rgba(233, 125, 34, 0.9);">
+    <div class="container">
+      <a href="#" class="navbar-brand"><h2 style="color:#672F02"> YUM!</h2></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarid">
+         <ul class="navbar-nav text-center ml-auto">
+          <li class="nav-items">
+            <a href="afterlogin.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-items">
+            <a href="afterabout.html" class="nav-link">About Us</a>
+          </li>
+          
+          <li class="nav-items">
+            <a href="aftermenu.html" class="nav-link">Menu</a>
+          </li>
+        
+          <li class="nav-items">
+            <a href="afterreservation.php" class="nav-link">Reservation</a>
+          </li>
+            <li class="nav-items">
+            <a href="index.html" class="nav-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="jumbotron " id="my">
+<div class="container" >
+<br><br>
+<center>
+ <div class="row" style="margin:50px; padding:30px;"> 
+  <div class="col-12"> 
+	<h1 class="card-text text-center" style="color:white;"> Reservation
+	</h1>
+</div> 
+
+
+</div>
+
+</center>
+</div>
+</div>
+
+<center>
+
+
+
+  <div class="container" id="l">
+	<div class="row">
+		<div class="col-xl-7">
+		<p class="card-text text-center">
+			<img style="margin-top:50px ; width:100% ; height:374px;"src="images/3.png" > 
+		</div>
+		<div class="col-xl-5">
+			<h1 >Reservation</h1>
+			<p class="description">Elevate Your Experience: Reserve Your Table Today</p>
+			<div class="form-section">
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Name" name="name" required>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" placeholder="Email" name="email" required>
+					</div>
+					<div class="form-group">
+						<input type="tel" class="form-control" placeholder="Phone Number" name="phone" required>
+					</div>
+					<div class="form-group">
+						<input type="no" class="form-control" placeholder="No of People" name="no" required>
+					</div>
+					<div class="form-group">
+						<input type="date" class="form-control" name="date" required>
+					</div>
+					<div class="form-group">
+						<input type="time" class="form-control" name="time" required>
+					</div>
+					<button type="submit" class="btn btn-danger btn-block" style="border-radius:105px;">Send Now</button>
+				</form>
+			</div>
+		</div>
+  </div>
+  </div>
+  
+ </center> 
+  <footer class="footer ">
+ <div class="container-fluid" style="margin-top:10px">
+	<div class="row" id="a"> 
+		<div class="col-xl-3" id="b">  
+			<div style="width:250px height:350px">
+				<p class="text-center">
+					<img width="200" height="200" src="logo.jpeg" alt="pizza-five-eighths"/>
+					<br>
+				</p>
+			</div> 
+		</div>
+<div class="col-xl-2" >  
+	<div style="width:250px height:350px">
+		<h3 class="font-weight-bold text-warning">Get started</h3>
+			<ul class="list-group list-group-horizontal">
+				<li><a href="home.html#section1" class="foot">Home</a></li>
+				<li><a href="#section1" class="foot">Signup</a></li>
+				<li><a href="menu.html" class="foot">Menu</a></li>
+			</ul>
+	</div> 
+	</div>
+
+
+<div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">About Us</h3>
+	<ul class="list-group list-group-horizontal">
+		<li><a href="about_us.html" class="foot">Company information</a></li>
+		<li><a href="contact_us.html" class="foot">Contact us</a></li>
+		<li><a href="home.html#reviews_section" class="foot">Reviews</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-2" >  
+
+	<div style="width:250px height:350px">
+	<h3 class="font-weight-bold text-warning">Others</h3>
+	<ul class="list-group list-group-horizontal">
+		<li><a href="reservation.html" class="foot">Reservation</a></li>
+		<li><a href="home.html#combo" class="foot">Combos</a></li>
+		<li><a href="contact_us.html" class="foot">Address</a></li>
+		</ul>
+	
+</div> 
+</div>
+
+  <div class="col-xl-3" id="a">  
+    <p class="card-text text-justify">
+	&nbsp&nbsp&nbsp
+	<a href="#" class="m"><img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/twitter--v1.png" alt="twitter--v1"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="20" height="20" src="https://img.icons8.com/ios-filled/30/facebook-f.png" alt="facebook-f"/>&nbsp&nbsp</a>
+	<a href="#" class="m"><img width="30" height="30" src="https://img.icons8.com/windows/30/google-plus.png" alt="google-plus"/>&nbsp&nbsp</a>
+	<br>
+	</p>
+	<a href="#"><button class="btn btn-danger  btn-rounded btn-lg">Contact us</button></a>
+	
+</div>
+	
+</div> 
+</div>
+
+ 
+</div>
+
+<div class="c-flex " style="background-color:rgba(0, 0, 0, 0.3)">
+  <p class="card-text text-center">&copy; 2023 My Website. Anmol Ashish.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>

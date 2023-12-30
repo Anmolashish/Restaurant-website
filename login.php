@@ -3,13 +3,13 @@
 if(isset($_POST['save']))
 {
 	
-$first_name=$_POST['first_name'];
+$email=$_POST['email'];
 
 $password=$_POST['password'];
 
 $servername="localhost";
 $username="root";
-$password="abatwal@112";
+$password="";
 $dbname="restaurant";
 $conn=new mysqli($servername,$username,$password,$dbname);
 
@@ -21,7 +21,7 @@ if($conn->connect_error)
 }
 
 
-$sql="insert into login(first_name,password)values('$first_name','$password')";
+$sql="insert into login(email,password)values('$email','$password')";
 if($conn->query($sql)==True)
 {
 	?><h3 class="msg"><?php echo "Record inserted successfully";

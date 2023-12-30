@@ -11,7 +11,7 @@ $password=$_POST['password'];
 
 $servername="localhost";
 $username="root";
-$password="abatwal@112";
+$password="";
 $dbname="restaurant";
 $conn=new mysqli($servername,$username,$password,$dbname);
 
